@@ -1,0 +1,29 @@
+# Build outputs
+build/
+[Bb]in/
+[Oo]bj/
+*.dll
+*.pdb
+*.exe
+*.ilk
+*.exp
+*.lib
+*.obj
+*.bmp
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Vendored third-party SDKs — not vendored in git, see CONTRIBUTING.md for how to fetch them
+third-party/sdl2/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
