@@ -12,11 +12,13 @@ zero-config interface.
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-pre--alpha-orange.svg)](#project-status)
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#roadmap)
-[![Support this project](https://img.shields.io/badge/%E2%9D%A4-Support%20this%20project-e25555.svg)](https://codesbygom.github.io/donate)
+[![Support this project](https://img.shields.io/badge/%E2%9D%A4-Support%20this%20project-e25555.svg)](https://gomworks.github.io/donate)
+[![Releases](https://img.shields.io/badge/releases-none%20yet-lightgrey.svg)](#releases)
 
 [Features](#features) •
 [Status](#project-status) •
 [Roadmap](#roadmap) •
+[Releases](#releases) •
 [Building](#building-from-source) •
 [Architecture](docs/ARCHITECTURE.md) •
 [Contributing](CONTRIBUTING.md)
@@ -82,8 +84,8 @@ libretro ecosystem.
 > prototype and will change as the project matures.
 
 ```bash
-git clone --recursive https://github.com/codesbygom/rewind.git
-cd rewind
+git clone --recursive https://github.com/GOMWorks/Rewind.git
+cd Rewind
 ```
 
 If you already cloned without `--recursive`, fetch the submodule with:
@@ -95,10 +97,17 @@ git submodule update --init --recursive
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for toolchain requirements (SDL2, a libretro
 core to test against, etc.) and how to run the current prototype.
 
+## Releases
+
+🚧 **No release yet.** Rewind is still pre-alpha (see [Project status](#project-status))
+— there is nothing installable to download yet. Watch or star the repo to get notified
+the moment the first build goes up on the
+[Releases page](https://github.com/GOMWorks/Rewind/releases).
+
 ## Support this project
 
 Rewind is free, open-source, and built in spare time. If it's useful to you, consider
-[supporting its development](https://codesbygom.github.io/donate) ❤️
+[supporting its development](https://gomworks.github.io/donate) ❤️
 
 ## License
 
