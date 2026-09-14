@@ -69,6 +69,11 @@ Systems like the original Xbox, GameCube, Saturn, or Dreamcast are out of scope 
 either too heavy for a lightweight frontend or not realistically supported by the
 libretro ecosystem.
 
+> **Linux?** Not on the roadmap above since [.NET MAUI](https://dotnet.microsoft.com/apps/maui)
+> (the primary UI framework) doesn't target it. If Linux support gets built, it'll be a
+> separate Avalonia-based UI head sharing the same core — see
+> [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md#ui-framework--linux-strategy).
+
 ## Built with
 
 - **[libretro](https://www.libretro.com/)** — the emulation core API/ecosystem.
