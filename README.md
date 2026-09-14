@@ -11,7 +11,7 @@ zero-config interface.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-pre--alpha-orange.svg)](#project-status)
-[![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#roadmap)
+[![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS-lightgrey.svg)](#roadmap)
 [![Support this project](https://img.shields.io/badge/%E2%9D%A4-Support%20this%20project-e25555.svg)](https://gomworks.github.io/donate)
 [![Releases](https://img.shields.io/badge/releases-none%20yet-lightgrey.svg)](#releases)
 
@@ -39,7 +39,7 @@ but as a native desktop *and* mobile app.
 
 - 🎮 **One frontend, many consoles** — powered by [libretro](https://www.libretro.com/)
   cores, the same emulation backends used by RetroArch.
-- 🖥️ **Native, not Electron** — the UI is built with [Avalonia](https://avaloniaui.net/),
+- 🖥️ **Native, not Electron** — the UI is built with [.NET MAUI](https://dotnet.microsoft.com/apps/maui),
   giving Rewind a genuinely native look and feel on every platform it targets.
 - 🧩 **No core soup** — Rewind talks to libretro cores directly through
   [lrcpp](https://github.com/leiradel/lrcpp) instead of shelling out to a separate
@@ -61,7 +61,7 @@ were ruled out along the way), see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md
 
 | Phase | Target | Systems | Status |
 |---|---|---|---|
-| 1 | Desktop (Windows, macOS, Linux) | NES, SNES, Game Boy, Genesis, Atari 2600 | 🔨 In progress |
+| 1 | Desktop (Windows, macOS) | NES, SNES, Game Boy, Genesis, Atari 2600 | 🔨 In progress |
 | 2 | Desktop | PS1, N64, PSP (GPU-accelerated cores) | ⏳ Planned |
 | 3 | Mobile (Android, iOS) | Phase 1 systems | ⏳ Planned |
 
@@ -74,7 +74,7 @@ libretro ecosystem.
 - **[libretro](https://www.libretro.com/)** — the emulation core API/ecosystem.
 - **[lrcpp](https://github.com/leiradel/lrcpp)** — a C++ wrapper around the libretro C
   API, vendored here as a git submodule.
-- **[Avalonia](https://avaloniaui.net/)** — the cross-platform, native UI framework for
+- **[.NET MAUI](https://dotnet.microsoft.com/apps/maui)** — the cross-platform, native UI framework for
   the desktop and mobile app.
 - **C# / .NET** — application logic and UI layer.
 
