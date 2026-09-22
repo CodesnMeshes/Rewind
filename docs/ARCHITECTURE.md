@@ -19,6 +19,29 @@
 maintained C++ library built specifically for writing libretro frontends. Rewind wraps
 it in a thin C# layer.
 
+## UI framework & Linux strategy
+
+The desktop/mobile UI is built with **[.NET MAUI](https://dotnet.microsoft.com/apps/maui)**,
+which reaches Windows, macOS, Android, and iOS — but has no Linux target and none is
+planned by Microsoft.
+
+If/when Linux support is worth doing, the plan is **not** to try to stretch MAUI onto it.
+Instead:
+
+- All application logic, state, and view-models stay in a UI-agnostic shared project (no
+  MAUI types leak into it).
+- MAUI is the View layer for Windows/macOS/mobile.
+- A separate **[Avalonia](https://avaloniaui.net/)**-based View layer — which does support
+  Linux natively — would be added as a second UI head, binding to the same shared
+  view-models.
+
+This was chosen over adopting [Uno Platform](https://platform.uno/) as a MAUI replacement,
+and over Uno's `.NET MAUI Embedding` (which only re-exposes MAUI *controls* inside an Uno
+host on the platforms MAUI already reaches — it does not bring MAUI itself to Linux).
+Keeping MAUI as the primary framework and adding Avalonia only where Linux is actually
+needed keeps the primary platforms on the more mainstream, better-supported toolkit
+without giving up a real path to Linux later.
+
 ## Core concepts (for reference)
 
 ### What is a "core"?
@@ -99,5 +122,6 @@ Rewind/
 ## Tools used
 
 - **lrcpp** — the libretro integration engine (MIT).
-- **SDL2** — used only for the early prototype; the final app uses Avalonia.
+- **SDL2** — used only for the early prototype; the final app uses .NET MAUI (Avalonia
+  for a Linux UI head, if/when that's built — see "UI framework & Linux strategy" above).
 - **.NET / C#** — the UI and application-logic layer.
